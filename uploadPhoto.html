@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>上传照片功能</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<script type="text/javascript" src="js/jquery.js"></script>
+		<script type="text/javascript" src="js/upload.js"></script>
+		<style>
+			label{
+				display: inline-block;
+				position: relative;
+				width: 7rem;
+				height: 7rem;
+				margin-left: 1rem;
+				margin-top: 1.5rem;
+			}
+			.upload-img{
+				width: 100%;
+				height: 100%;
+				max-width: 11.5rem;
+				max-height: 13rem;
+				border: 1px solid #d8d8d8;
+				border-radius: .8rem;
+			}
+			input[type="file"] {
+				align-items: baseline;
+				color: inherit;
+				text-align: start;
+			}
+			.upload-input{
+				display: none;
+			}
+			
+			.btn-delete{
+				display: none;
+				position: absolute;
+				top: 0;
+				left: .1rem;
+				border-radius: .8rem;
+				border: none;
+				outline: none;
+				background: url(img/icon-del.png) no-repeat center center;
+				width: 7.1rem;
+				height: 7.1rem;
+				background-size: 7rem;
+				
+			}
+		</style>
+	</head>
+	<body>
+		
+		<label class="upload-group-item" >
+			<img src="img/plus.png" alt="" class="upload-img" />
+			<input class="upload-input"  type="file"  accept="image/*"  />
+			<button class="btn-delete"></button>
+		</label>
+		
+	
+	</body>
+</html>

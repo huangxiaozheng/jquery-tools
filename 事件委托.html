@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+	</head>
+	<body>
+		<ul>
+			<li>1111111111111</li>
+			<li>2222222222222</li>
+			<li>3333333333333</li>
+			<li>4444444444444</li>
+		</ul>
+		<button class="btn2">追加新的li</button>
+		<button class="btn2">移除事件委托</button>
+	</body>
+	<script src="js/jquery.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		
+		/*事件委托的用途：一个表格或者列表中 ，给每一条数据都绑定一个事件时*/
+		
+		
+		/*事件委托：
+		 * 将多个子元素（li）的事件监听委托给父辈元素（ul）处理，监听回调加在父辈元素上，当操作任何一个子元素时，事件会冒泡到父辈元素上
+		 * 父辈元素不会直接处理事件，而是根据event.target得到发生事件的子元素，通过这个子元素调用事件回调函数，即效果是子元素处理了回调事件
+		 * 
+		 * 好处：新添加的子元素，自动有事件响应处理；减少了事件监听的数量
+		 * 
+		 * 设置事件委托：$('父元素').delegate('子元素','事件名',回调函数)
+		 * 移除事件委托：
+		 * 		移除某个事件委托：$('父元素').undelegate('事件名')
+		 * 		移除所有事件委托：$('父元素').undelegate()
+		 */
+		
+		
+		/*注意的三个点：事件是加在父元素上，但真正调用回调函数的是发生事件的子元素，当然事件会冒泡到父元素上*/
+		
+		/*需求：点击li，为li添加背景颜色，包括新添加的li*/
+		$('btn1').click(function(){
+			$('<li>新追加的li</li>').appendTo('ul');
+		})
+		
+		$('ul').delegate('li','click',function(){
+			//这里的$(this)是每一个li
+			$(this).css('background-color','pink');
+		})
+		
+		$('btn2').click(function(){
+			$('ul').appendTo('click');
+		})
+	</script>
+</html>

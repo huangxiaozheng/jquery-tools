@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>五角星平分</title>
+		<style type="text/css">
+			*{margin: 0;padding: 0;}
+			ul,ul li{list-style: none;}
+			ul{display: flex;flex-direction: row;margin: 0 auto;}
+			li{margin: 2rem;font-size: 20px;}
+		</style>
+		<script src="js/jquery.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function(){
+				
+				$('li').on('mouseenter',function(){
+					//当前项的前面都是实心，后面都是空心
+					$(this).text('★').prevAll().text('★');
+					$(this).nextAll().text('☆');
+				});
+				$('li').on('mouseleave',function(){
+					//鼠标离开所有项都是空心
+					$(this).text('☆').siblings().text('☆');
+					//找到当前项，前面的都是实心，后面的都是空心
+					$('li.current').text('★').prevAll().text('★');
+				});
+				$('li').on('click',function(){
+					//找到并记录当前点击的是谁,通过添加一个类来记录
+					$(this).addClass('current').siblings().removeClass('current');
+				})
+			})
+		</script>
+	</head>
+	<body>
+		<ul>
+			<li>☆</li>
+			<li>☆</li>
+			<li>☆</li>
+			<li>☆</li>
+			<li>☆</li>
+		</ul>
+		<div>fhsjkjhhfjhhfkjsfsk</div>
+	</body>
+</html>

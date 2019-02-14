@@ -1,0 +1,157 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  overflow-y: scroll; }
+
+body {
+  background-color: #f2f2f2;
+  font-family: PingFang;
+  color: #333333; }
+
+ul,
+ul li {
+  list-style: none; }
+
+h1, h2, h3 {
+  font-weight: normal; }
+
+a {
+  text-decoration: none;
+  outline: none;
+  color: #333333;
+  display: block; }
+
+button {
+  border: none;
+  outline: none;
+  background-color: #f02b2b;
+  color: #fff;
+  border-radius: .3rem; }
+
+input {
+  border: none;
+  text-align: right; }
+
+.hide {
+  display: none; }
+
+.order {
+  background-color: #f2f2f2; }
+  .order-item {
+    background-color: #fff;
+    margin: 1.2rem 4vw;
+    border-radius: .5rem;
+    padding: 1.2rem 0; }
+    .order-item .orderInfo .theme, .order-item .customInfo .theme, .order-item .payMeth .theme {
+      border-bottom: 1px solid #e6e6e6;
+      padding: 0 0 1.2rem 4vw;
+      font-size: 1.5rem; }
+    .order-item .orderInfo .theme:before, .order-item .customInfo .theme:before, .order-item .payMeth .theme:before {
+      content: "";
+      height: 1.3rem;
+      width: 3px;
+      background-color: #f02b2b;
+      display: inline-block;
+      background-size: contain;
+      margin-right: .6rem;
+      position: relative;
+      top: .2rem; }
+    .order-item .orderInfo .item, .order-item .customInfo .item, .order-item .payMeth .item {
+      padding: 1.2rem 4vw 1.2rem 0;
+      border-bottom: 1px solid #e6e6e6;
+      margin-left: 4vw;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      font-size: 1.3rem; }
+    .order-item .orderInfo .item:last-child, .order-item .customInfo .item:last-child, .order-item .payMeth .item:last-child {
+      border-bottom: none; }
+  .order-item:last-child {
+    background-color: #f2f2f2;
+    text-align: center; }
+    .order-item:last-child button {
+      width: 100%;
+      height: 3.5rem; }
+  .order .orderInfo .orderNum {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center; }
+  .order .orderInfo .reduce:before {
+    content: "-";
+    height: 1.5rem;
+    width: 1.5rem;
+    background-color: #f02b2b;
+    display: inline-block;
+    background-size: contain;
+    margin-right: .6rem;
+    color: #fff;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 2rem;
+    line-height: 1.2rem; }
+  .order .orderInfo .add:after {
+    content: "+";
+    height: 1.5rem;
+    width: 1.5rem;
+    background-color: #f02b2b;
+    display: inline-block;
+    background-size: contain;
+    margin-left: .6rem;
+    color: #fff;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 2rem;
+    line-height: 1.2rem; }
+  .order .orderInfo .num {
+    width: 2em;
+    text-align: center; }
+  .order .orderInfo .fileBox {
+    display: flex;
+    /*flex-direction: column;*/
+    justify-content: space-between; }
+  .order .orderInfo label {
+    width: 5rem;
+    height: 5rem;
+    margin-top: 1.2rem; }
+  .order .orderInfo .upload-img {
+    width: 100%;
+    height: 100%;
+    max-width: 11.5rem;
+    max-height: 13rem;
+    border: 1px solid #d8d8d8;
+    border-radius: .8rem; }
+  .order .orderInfo input[type="file"] {
+    align-items: baseline;
+    color: inherit;
+    text-align: start; }
+  .order .orderInfo .upload-input {
+    display: none; }
+  .order .orderInfo .btn-delete {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: .1rem;
+    border-radius: .8rem;
+    border: none;
+    outline: none;
+    background: url(../img/order/icon-del.png) no-repeat center center;
+    width: 7.1rem;
+    height: 7.1rem;
+    background-size: 7rem; }
+  .order .payMeth select {
+    width: 100%;
+    padding: 1rem 0; }
+    
+    .upload-group-item{
+    	display: flex;
+    	flex-direction: row;
+    	justify-content: flex-start;
+    	flex-wrap: wrap;
+    }
+
+/*# sourceMappingURL=confirmOrder.css.map */

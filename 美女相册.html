@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<style type="text/css">
+			*{padding: 0;margin: 0;}
+			ul,ul li{list-style: none;}
+			ul{display: flex;flex-direction: row;width: 100%;margin-top: 2rem;}
+			ul li{width: 33.33%;padding-left: 4%;}
+			ul li:last-child{padding-right: 4%;}
+			ul li .small{width: 100%;}
+			ul li .big{display: none;}
+		</style>
+		<script src="js/jquery.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function(){
+				$('.imgBox li img').click(function(){
+				//获取每一张照片的地址
+				var imgUrl = $(this).attr("src");
+				//点到哪一张就将该照片的地址给到下面展示区
+				$('.showImg').attr('src',imgUrl);
+				
+				var title = $(this).attr("alt");
+				$('.title').text(title);
+				})
+				
+				
+			})
+		</script>
+	</head>
+	<body>
+		<ul class="imgBox">
+			<li>
+				<img class="small" src="img/4.jpg"" alt="1"/>
+				
+			</li>
+			<li>
+				<img class="small" src="img/2.jpg" alt="2" />
+				
+			</li>
+			<li>
+				<img class="small" src="img/3.jpg" alt="3" />
+				
+			</li>
+		</ul>
+		<div style="width: 92%; height: 15rem;margin: 2rem 4%;">
+			<img class="showImg" src="img/4.jpg" style="width: 100%; height: 100%;"/>
+		</div>
+		<div class="title" style="text-align: center;">1</div>
+	</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>返回顶部</title>
+		<style type="text/css">
+			*{margin: 0;padding: 0;}
+			html{font-size: 62.5%;}
+			ul,ul li{list-style: none;font-size: 1.6rem;}
+			.container{margin: 2rem;}
+			.img1,.img2{width: 100%;,height: 5rem;}
+			.img1 img,.img2 img{width: 100%;,height: 100%;}
+			.goBackTop{
+				width: 8rem;height: 4rem;background-color: brown;line-height: 4rem;text-align: center;font-size: 1.6rem;
+				position: fixed;
+				right: 2rem;
+				bottom: 2rem;
+				}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<div class="img1">
+				<img src="img/1.jpg"/>
+			</div>
+			<ul>
+				<li>对于初次学习jQuery的小伙伴们，不少不知道多个css样式属性怎么写，下面是jQuery css()多个</li>
+				<li>对于初次学习jQuery的小伙伴们，不少不知道多个css样式属性怎么写，下面是jQuery css()多个</li>
+				<li>对于初次学习jQuery的小伙伴们，不少不知道多个css样式属性怎么写，下面是jQuery css()多个</li>
+				<li>对于初次学习jQuery的小伙伴们，不少不知道多个css样式属性怎么写，下面是jQuery css()多个</li>
+				<li>对于初次学习jQuery的小伙伴们，不少不知道多个css样式属性怎么写，下面是jQuery css()多个</li>
+			</ul>
+			<div class="img2">
+				<img src="img/img.png"/>
+			</div>
+			<ul>
+				<li>对于初次学习jQuery的小伙伴们，不少不知道多个css样式属性怎么写，下面是jQuery css()多个</li>
+				<li>对于初次学习jQuery的小伙伴们，不少不知道多个css样式属性怎么写，下面是jQuery css()多个</li>
+				<li>对于初次学习jQuery的小伙伴们，不少不知道多个css样式属性怎么写，下面是jQuery css()多个</li>
+				<li>对于初次学习jQuery的小伙伴们，不少不知道多个css样式属性怎么写，下面是jQuery css()多个</li>
+				<li>对于初次学习jQuery的小伙伴们，不少不知道多个css样式属性怎么写，下面是jQuery css()多个</li>
+			</ul>
+			<div class="goBackTop">返回顶部</div>
+		</div>
+		<script src="js/jquery.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$('.goBackTop').click(function(){
+				//页面的总距离
+				var $page = $('html,body');
+				//$('html').scrollTop() + $('body').scrollTop();是为了兼容pc端不同浏览器，ie下$('html').scrollTop()有值，谷歌下$('body').scrollTop()有值
+				var distance = $('html').scrollTop() + $('body').scrollTop();
+				//总时间
+				var time = 500;
+				//时间间隔
+				var intervalTime = 50;
+				//单元移动的距离
+				var itemDistance = distance / (time/intervalTime);
+				//使用循环定时器不断滚动
+				var intervalId = setInterval(function(){
+					//更新距离
+					distance -= itemDistance
+					//到达顶部，停止定时器
+					if(distance<=0){
+						distance = 0;
+						clearInterval(intervalId);
+					}
+					//将页面总距离设置为0，就是滚动到顶部
+					$page.scrollTop(distance);
+				},intervalTime)
+			})
+			
+			
+		</script>
+	</body>
+</html>

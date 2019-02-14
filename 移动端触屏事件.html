@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<style type="text/css">
+			*{margin: 0;padding: 0;}
+			.test{height: 200px;width:200px;background-color: pink;margin: auto;}
+		</style>
+		<script src="js/jquery.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function(){
+				var item = $('.test');
+				item.ontouchstart = function(){
+					alert(1)
+				}
+				
+			})
+		</script>
+	</head>
+	<body>
+		<div class="test">
+			
+		</div>
+	</body>
+</html>

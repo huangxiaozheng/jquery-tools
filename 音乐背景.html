@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>音乐背景</title>
+		<style type="text/css">
+			*{margin: 0;padding: 0;}
+			a{text-decoration: none;color: #333;}
+			.list{display: flex;flex-direction: row;list-style: none;}
+			.list-item {height: 60px;width: 100px;float: left;position: relative;overflow: hidden;}
+			.list-item a{position: absolute;height: 100%;width: 100%;line-height: 60px;text-align: center;}
+			.list-item  span{background-color: yellow;height: 100%;width: 100%;position: absolute;display: inline-block;}
+			
+		</style>
+		<script src="js/jquery.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function(){
+				$('.nav .list-item').mouseenter(function(){
+					$(this).children('span').stop().animate({top:60});
+				}).mouseleave(function(){
+					$(this).children('span').stop().animate({top:0});
+				});
+			})
+		</script>
+	</head>
+	<body>
+		<div class="nav">
+			<ul class="list">
+				<li class="list-item">
+					<span></span>
+					<a href="javascript:void(0);">导航1</a>
+				</li>
+				<li class="list-item">
+					<a href="javascript:void(0);">导航1</a>
+					<span></span>
+				</li>
+				<li class="list-item">
+					<a href="javascript:void(0);">导航1</a>
+					<span></span>
+				</li>
+				<li class="list-item">
+					<a href="javascript:void(0);">导航1</a>
+					<span></span>
+				</li>
+				<li class="list-item">
+					<a href="javascript:void(0);">导航1</a>
+					<span></span>
+				</li>
+				<li class="list-item">
+					<a href="javascript:void(0);">导航1</a>
+					<span></span>
+				</li>
+			</ul>
+		</div>
+	</body>
+</html>

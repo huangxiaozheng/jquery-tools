@@ -1,0 +1,182 @@
+@charset "UTF-8";
+/*©CopyRight Jinsam Tel:18860106979 E-mail:happy88163@163.com Forever*/
+$c33: #333333;
+$c66: #666666;
+$c99: #999999;
+$cf0: #f0f0f0;
+$ce5: #e5e5e5;
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    font-size: 62.5%;
+//  font-size: 56.25%;
+}
+
+@media screen and (max-width: 320px) {
+html {
+    font-size: 50%;
+}
+}
+
+body {
+    font-family:"Lucida Sans", Verdana, sans-serif;
+}
+html,body{
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    }
+i,
+em,
+span,
+div,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+li,
+p,
+section,
+input,
+select,
+option {
+    font-size: 1.4rem;
+    line-height: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+    font-weight: normal;
+}
+
+i,
+em,
+span {
+    display: inline-block;
+}
+
+i,
+em {
+    font-style: normal;
+}
+
+img{
+    display: block;
+}
+
+ul,
+ul li {
+    list-style: none;
+}
+
+a,
+a:hover,
+a:visited {
+    text-decoration: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    color: rgb(51, 51, 51);
+}
+
+div::-webkit-scrollbar{
+    display:none;
+}
+
+button,input,select,textarea{
+    border: none;
+    outline: none;
+    border-radius: 0;
+    background: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+select{
+    -webkit-appearance: none;
+//  line-height: 14px;
+//  height: 14px;   /*默认  font-size:14 + 1px + 1px*/
+}
+
+option{
+    -webkit-appearance:none;
+}
+
+textarea{
+    -webkit-appearance: none;
+    color: #333;
+//  line-height: 14px;
+//  height: 14px;   /*默认  font-size:14 + 1px + 1px*/
+}
+
+.hide {
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
+
+//select::-ms-expand{ display: none; } /* ie 默认下拉箭头图标*/
+//option::-ms-expand{ display: none; } 
+
+@mixin icon($pic, $width:100%, $height:100%, $left:left, $top:center) {
+    background: url(../img/#{$pic}) no-repeat ;
+    background-size: #{$width} #{$height};
+    background-position: #{$left} #{$top};
+} 
+//@include icon('../img/server/icon-tel.png','4.5rem','4.5rem','right','center');
+
+@mixin arrow($size:.8rem, $color:#999, $deg:0) {
+      
+    display: inline-block;
+    border-right: .1rem solid $color;
+    border-bottom: .1rem solid $color;
+    width: $size;
+    height: $size;
+    $degs : $deg - 45;
+    transform: rotate(#{$degs}deg);
+    -webkit-transform: rotate(#{$degs}deg);
+//  -moz-transform: rotate(#{$degs}deg);
+//  -ms-transform: rotate(#{$degs}deg);     // IE 9 
+//  -moz-transform: rotate(#{$degs}deg);    // Firefox 
+//  -webkit-transform: rotate(#{$degs}deg); // Safari 和 Chrome 
+//  -o-transform: rotate(#{$degs}deg);      // Opera 
+}
+@mixin arrowClk($deg:0) {
+    $degs : $deg - 45;
+    transform: rotate(#{$degs}deg);
+    -webkit-transform: rotate(#{$degs}deg);
+}
+//
+
+@mixin flex($left:flex-start, $top:center) {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: $left;
+    align-items: $top;
+}
+
+@mixin fixed($position:bottom) {
+    position: fixed;
+    width: 100%;
+    left: 0;
+    #{$position}: 0;
+}
+
+//@mixin sel() {
+//  border: none;
+//  outline: none;
+//  appearance: none;
+//  -webkit-appearance: none;
+//  background: none;
+//  direction: rtl;
+//}
+/*©CopyRight Jinsam Tel:18860106979 E-mail:happy88163@163.com Forever*/

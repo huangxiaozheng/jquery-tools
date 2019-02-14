@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<script src="js/jquery.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function(){
+				//不推荐，占用内存空间，专业叫法：内存泄漏
+				$(".cont1").html("");
+				//推荐,清空元素，标签还在
+				$(".cont2").empty();
+				$('.cont3').text('');
+				//删除节点，标签不在
+				$(".cont4").remove();
+				
+				
+				$('.des').click(function(){
+					alert(1)
+				})
+				
+				//在jq中所有的clone都是深复制，但是传参时，true会将事件一起复制，false则不会复制事件
+				$('.des').clone(true).appendTo('.cont').css('color','red');
+				$('.des').clone(false).appendTo('.cont').css('color','blue');
+			
+			})
+		</script>
+	</head>
+	<body>
+		<div class="cont">
+			<p class="cont1">333333333333333333</p>
+			<p class="cont2">66666666666666666</p>
+			<p class="cont3">777777777777</p>
+			<p class="cont4">8888888888</p>
+		</div>
+		
+		<div class="des" style="padding:3rem 0">来呀，复制我呀</div>
+	</body>
+</html>

@@ -1,0 +1,84 @@
+* {
+  padding: 0;
+  margin: 0;
+  line-height: 100%; }
+
+html {
+  font-size: 62.5%; }
+
+
+html,body{
+	/*去除苹果点击背景*/
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    }
+i,
+em {
+  font-style: normal; }
+
+ul,
+ul li {
+  list-style: none; }
+
+a,
+a:hover,
+a:visited {
+  text-decoration: none;
+  color: #333;
+   }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal; }
+
+.hide {
+  display: none; }
+
+.show {
+  display: block; }
+
+::-webkit-scrollbar {
+  display: none; }
+
+/*body {
+  background-color: #F4F4F4;
+  font-size: 1.5rem; 
+  font-family: sans-serif;
+  }*/
+  
+input,
+button {
+      	-webkit-appearance: none;
+      	border-radius: 0;
+      	background-color:#fff;
+      	outline: none;
+      	border:none;
+		 }   
+  
+/*微信低版本背景图片无点击事件，但却可以点击（去掉默认点击事件）给图片加样式*/
+/*.background-img{
+	pointer-events: none;
+}*/
+
+
+/* 多行超过省略，加class：multi-line-omit即可   */
+/*.multi-line-omit {
+  display: -webkit-box !important;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 8;//控制行数
+  overflow: hidden;
+  word-wrap: break-word;
+  word-break: break-all;
+}*/
+
+/* 单行超过省略，加class：one-line-omit即可   */
+/*.one-line-omit {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}*/
+

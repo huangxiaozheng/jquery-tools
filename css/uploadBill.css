@@ -1,0 +1,385 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden; }
+
+body {
+  background-color: #f2f2f2;
+  font-family: PingFang; }
+
+ul,
+ul li {
+  list-style: none; }
+
+h1, h2 {
+  font-weight: normal; }
+
+a {
+  text-decoration: none;
+  outline: none; }
+
+i {
+  font-style: normal; }
+
+.hide {
+  display: none; }
+
+.uploadBill {
+  display: flex;
+  flex: 1;
+  position: relative;
+  flex-direction: column; }
+
+.warn {
+  font-size: 1.2rem;
+  color: #f02b2b;
+  padding: 1rem;
+  line-height: 1.5; }
+
+.warn:before {
+  content: "";
+  background: url(../img/icon-warn.png) left center no-repeat;
+  width: 1rem;
+  height: 1rem;
+  display: inline-block;
+  background-size: contain;
+  position: relative;
+  top: .2rem;
+  padding-left: .5rem; }
+
+.bill-item {
+  background-color: #fff;
+  margin-bottom: 1rem; }
+  .bill-item .titleBox {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 1.5rem;
+    border-bottom: 1px solid #ebebeb; }
+    .bill-item .titleBox .case {
+      font-size: 1.3rem;
+      color: #868686;
+      padding: 1.6rem; }
+    .bill-item .titleBox .case:after {
+      content: "";
+      background: url(../img/icon-arrow.png) right center no-repeat;
+      height: 0.7rem;
+      width: .8rem;
+      display: inline-block;
+      background-size: contain;
+      padding-left: .5rem; }
+  .bill-item .title {
+    font-size: 1.5rem;
+    color: #f02b2b;
+    padding: 1.6rem  0;
+    margin-left: 1.5rem;
+    border-bottom: 1px solid #ebebeb; }
+  .bill-item .firstTitle {
+    margin-left: 0;
+    border-bottom: none; }
+  .bill-item .title:before {
+    content: "|";
+    font-weight: bolder;
+    color: #f02b2b;
+    padding-right: .3rem; }
+  .bill-item .cont {
+    padding: 2rem 1.5rem; }
+    .bill-item .cont-item .upload-title {
+      font-size: 1.4rem;
+      color: #333333; }
+    .bill-item .cont-item label {
+      display: inline-block;
+      position: relative;
+      width: 7rem;
+      height: 10rem;
+      margin-left: 1rem;
+      margin-top: 1.5rem; }
+      .bill-item .cont-item label .upload-img {
+        width: 100%;
+        height: 100%;
+        max-width: 11.5rem;
+        max-height: 13rem;
+        border: 1px solid #d8d8d8;
+        border-radius: .5rem;
+        background-color: #e3e1e1; }
+      .bill-item .cont-item label .upload-text {
+        font-size: .5rem;
+        color: #868686;
+        position: relative;
+        bottom: 2rem;
+        text-align: center; }
+      .bill-item .cont-item label input[type="file"] {
+        align-items: baseline;
+        color: inherit;
+        text-align: start; }
+      .bill-item .cont-item label .upload-input {
+        display: none; }
+      .bill-item .cont-item label .btn-delete {
+        position: absolute;
+        top: .1rem;
+        right: .1rem;
+        border-radius: .8rem;
+        border: none;
+        outline: none;
+        background: url(../img/icon-del.png) no-repeat center center;
+        width: 2rem;
+        height: 2rem;
+        background-size: 2rem;
+        z-index: 99; }
+  .bill-item .cont:last-child {
+    padding-top: 0; }
+  .bill-item .imgBox {
+    display: flex;
+    flex-basis: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 3rem 2rem 6rem; }
+    .bill-item .imgBox-item {
+      width: 28vw;
+      height: 40vw;
+      color: #999999; }
+      .bill-item .imgBox-item img {
+        width: 100%;
+        height: 100%; }
+      .bill-item .imgBox-item .text {
+        font-size: 1.2rem;
+        text-align: center;
+        padding-top: 1.6rem; }
+      .bill-item .imgBox-item .centerText {
+        font-size: 1.3rem;
+        text-align: center;
+        padding-top: 1.3rem; }
+    .bill-item .imgBox-item.active {
+      width: 46vw;
+      height: 65vw;
+      color: #333; }
+  .bill-item .clause {
+    padding: 1.5rem; }
+    .bill-item .clause-item-title {
+      font-size: 1.3rem;
+      color: #333333;
+      line-height: 2.4; }
+    .bill-item .clause-item-cont {
+      font-size: 1.2rem;
+      color: #585757;
+      line-height: 2.4;
+      margin-left: 1.5em; }
+    .bill-item .clause-item .tip {
+      padding: 1.5rem 0; }
+  .bill-item .cashClause {
+    padding-bottom: 0; }
+  .bill-item .uploadBillBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: .6rem 0 1.2rem;
+    padding-bottom: 3rem; }
+    .bill-item .uploadBillBtn .billBtn {
+      font-size: 1.4;
+      color: #fff;
+      background-color: #f02b2b;
+      border-radius: .5rem;
+      border: 0;
+      padding: 1.2rem 3.6rem; }
+  .bill-item .pred {
+    padding: 1.5rem; }
+    .bill-item .pred-item {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 0; }
+      .bill-item .pred-item-text {
+        font-size: 1.2rem;
+        color: #242424;
+        line-height: 2rem;
+        position: relative; }
+      .bill-item .pred-item-text:before {
+        content: "";
+        background: url(../img/icon-stars.png) left center no-repeat;
+        width: .6rem;
+        height: .6rem;
+        display: inline-block;
+        background-size: contain;
+        padding-right: .3rem;
+        position: absolute;
+        top: .6rem;
+        left: -1rem; }
+      .bill-item .pred-item .text1 {
+        margin-left: 3.5rem; }
+      .bill-item .pred-item .textBox {
+        padding-right: 3.5rem;
+        margin-left: 1rem; }
+      .bill-item .pred-item .lampImg {
+        padding: 0 2.5rem; }
+      .bill-item .pred-item-img {
+        width: 6rem;
+        height: 6rem; }
+.bill-item:last-child {
+  margin-bottom: 0; }
+
+.popup {
+  display: none;
+  position: fixed;
+  display: flex;
+  flex: 1;
+  right: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 99; }
+  .popup .popupBox {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.6);
+    position: relative; }
+  .popup .top {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center; }
+    .popup .top .popupTitle {
+      color: #fff;
+      font-size: 1.3rem;
+      position: absolute;
+      left: 15vw;
+      top: 6vw; }
+    .popup .top .imgNum {
+      margin-top: 2rem;
+      padding: .6rem .9rem;
+      border-radius: 1.3rem;
+      font-size: 1.3rem;
+      color: #fff;
+      background-color: rgba(0, 0, 0, 0.7); }
+  .popup .sletImg {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 5; }
+    .popup .sletImg .contPopBox {
+      display: flex;
+      flex: 1;
+      align-items: center; }
+    .popup .sletImg .arr {
+      width: 2rem;
+      height: 3.7rem;
+      padding: 0 1rem; }
+    .popup .sletImg .mainImgBox {
+      position: relative; }
+      .popup .sletImg .mainImgBox .uploadMainImg {
+        width: 70vw;
+        height: 100vw;
+        background-color: rgba(0, 0, 0, 0.6);
+        display: flex;
+        flex: 1;
+        align-items: center;
+        justify-content: center;
+        position: relative; }
+        .popup .sletImg .mainImgBox .uploadMainImg .delText {
+          display: none;
+          color: #fff;
+          font-size: 1.2rem; }
+        .popup .sletImg .mainImgBox .uploadMainImg .mainImg {
+          width: 100%;
+          height: 100%; }
+      .popup .sletImg .mainImgBox .mark {
+        display: inline-block;
+        position: absolute;
+        width: 13.83vw;
+        text-align: center;
+        line-height: 2.4rem;
+        padding: 0 .5rem;
+        right: -.7vw;
+        top: 4vw;
+        color: #fff;
+        font-size: 1.4rem;
+        border-top-left-radius: 1.2rem;
+        border-bottom-left-radius: 1.2rem;
+        background-color: #ec4646; }
+      .popup .sletImg .mainImgBox .mark:before {
+        height: 0;
+        width: 0;
+        border-left: .5rem solid transparent;
+        top: 2.3rem;
+        right: 0;
+        opacity: 0.9; }
+      .popup .sletImg .mainImgBox .bg:before {
+        border-top: 0.5rem solid #c83434; }
+      .popup .sletImg .mainImgBox .mark:before {
+        content: "";
+        position: absolute; }
+  .popup .operateBtn {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center; }
+    .popup .operateBtn .operateBTn-item {
+      text-align: center; }
+      .popup .operateBtn .operateBTn-item .btnICon {
+        width: 4.4rem;
+        height: 4.4rem; }
+      .popup .operateBtn .operateBTn-item .btnText {
+        color: #fff;
+        font-size: 1.6rem;
+        text-align: center;
+        padding: 1rem 0 2rem 0; }
+
+.explain {
+  display: none; }
+  .explain .btnBox {
+    position: fixed;
+    background-color: #f2f2f2;
+    width: 100%; }
+    .explain .btnBox-item {
+      display: flex;
+      justify-content: flex-start;
+      border-bottom: 1px solid #ebebeb; }
+      .explain .btnBox-item button {
+        margin: 1rem 0 1rem .5rem;
+        border-radius: .3rem;
+        background-color: #f02b2b;
+        color: #fff;
+        padding: .5rem 1rem;
+        border: none; }
+      .explain .btnBox-item .retBTn {
+        margin-left: 1.5rem; }
+  .explain .title {
+    border-bottom: 0; }
+  .explain .artBox, .explain .covBox {
+    padding-top: 1.5rem;
+    width: 21rem;
+    height: 30rem;
+    margin: 0 auto; }
+    .explain .artBox .artImg, .explain .artBox .covImg, .explain .covBox .artImg, .explain .covBox .covImg {
+      width: 100%;
+      height: 100%; }
+  .explain .explainClus {
+    padding-top: 2.4rem;
+    padding-bottom: 0; }
+  .explain .covExplain {
+    padding: 2rem 0 .8rem 1.5rem; }
+    .explain .covExplain-title, .explain .covExplain-cont {
+      font-size: 1.2rem;
+      line-height: 2.4rem;
+      color: #333333; }
+
+.comfitBtnBox {
+  /*width: 100%;*/
+  /*height: 10rem;*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  padding: 2.5rem; }
+  .comfitBtnBox .comfitBtn {
+    padding: 1.2rem 8rem;
+    border-radius: .5rem;
+    border: none;
+    background-color: #F02B2B;
+    color: #fff; }
+
+/*# sourceMappingURL=uploadBill.css.map */

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>鼠标滑过显示对应的二级菜单</title>
+		<style type="text/css">
+			*{margin: 0;padding: 0;}
+			html{font-size:62.5%;font-size: 1.5rem;}
+			ul,ul li{list-style: none;}
+			.box li ul{display: none;}
+			.box{display: flex;flex-direction: row;width: 100%;}
+			.box li{width: 33.33%;padding:1rem 0;text-align: center;}
+		</style>
+		<script src="js/jquery.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function(){
+				$(".box>li").mouseover(function(){
+					$(this).children("ul").show();
+					$(this).siblings().children("ul").hide();
+				});
+				$(".box>li").mouseleave(function(){
+					
+					$(this).children("ul").hide();
+				})
+			})
+		</script>
+	</head>
+	<body>
+		<ul class="box">
+			<li style="background-color: palegoldenrod;">
+				<div>1</div>
+				<ul>
+					<li>1</li>
+					<li>1</li>
+					<li>1</li>
+					<li>1</li>
+				</ul>
+			</li>
+			<li style="background-color: palegreen;">
+				<div>2</div>
+				<ul>
+					<li>2</li>
+					<li>2</li>
+					<li>2</li>
+					<li>2</li>
+				</ul>
+			</li>
+			<li style="background-color: paleturquoise;">
+				<div>3</div>
+				<ul>
+					<li>3</li>
+					<li>3</li>
+					<li>3</li>
+					<li>3</li>
+				</ul>
+			</li>
+		</ul>
+	</body>
+</html>

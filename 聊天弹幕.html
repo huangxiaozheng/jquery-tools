@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<script src="js/jquery.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function(){
+				$('.btn').click(function(){
+					//获取到输入框的值
+					var inputCont = $('.inputCont').val();
+					//创建Li，并追加到ul中
+				  	$('<li></li>').text(inputCont).appendTo('.cont').css('border-bottom','red');
+					//清空输入框的值
+				   $('.inputCont').val("");
+				  
+				})
+				
+				
+			})
+			
+	
+		</script>
+		
+		
+		
+		
+		
+	</head>
+	<body>
+		<div class="box">
+			<span>发布</span>
+			<textarea class="inputCont" name="" rows="" cols="" style="height: 300px;width: 300px;"></textarea>
+			<button class="btn">发布</button>
+			<ul class="cont" style="list-style: none;">
+			</ul>
+		</div>
+	</body>
+</html>

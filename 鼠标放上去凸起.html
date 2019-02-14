@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			  *{
+    padding: 0;
+    margin: 0;
+    font-size: 15px;
+  } 
+  a{
+    text-decoration: none;
+    color: #333;
+  }
+  h2,h3{
+  	font-weight: normal;
+  }
+  
+
+  .container{
+    width: 1200px;
+    margin: auto;
+    padding: 60px;
+    background: #FFFFFF;
+    box-sizing: border-box; 
+  }
+  .list-item{
+    display: flex;
+    box-sizing: border-box;
+    align-items: center;
+    border: 0;
+    padding: 20px;
+    margin-bottom: 10px;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    border-radius: 3px;
+  }
+  .img-box{
+    width: 280px;
+    height: 170px;
+    overflow: hidden;
+    border-radius: 2px;
+  }
+  .image {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+  .clearfix{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    flex: 1;
+    margin-left: 30px;
+  }
+  .title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    color: #666;
+  }
+  .title-txt{
+    font-size: 18px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;  
+  }
+  .title-time{
+    width: 120px;
+    font-size: 16px;
+    color: #787878;
+  }
+  .instro {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 13px;
+    color: #999;
+    line-height: 1.8;
+    text-overflow: -o-ellipsis-lastline;
+    display: -webkit-box;  
+    -webkit-line-clamp: 2;  
+    -webkit-box-orient: vertical;  
+    height: 50px;
+    text-align: left;
+    padding-right: 30px;
+  }  
+  .info{
+    height: 50px;
+    color: #787878;
+  }
+  .info-hot{
+    margin-right: 30px;
+  }
+  .info-num{
+    flex: 1;
+    text-align: left;
+  }
+  .goto{
+    display: none;
+     float: right;
+  }
+  .list-item:hover{
+    box-shadow: 0 6px 10px 6px rgba(0,0,0,.1);
+  }
+  .list-item:hover .title-txt{
+    color: #226cd1;
+  }
+  .list-item:hover .goto{
+    display: block;
+   
+  }
+  .list-item:hover .image{
+    /*transform: scale(1.01);*/
+    animation:myfirst 1s alternate forwards;
+    -webkit-animation:myfirst 1s alternate forwards;
+    -moz-animation:myfirst 1s alternate forwards;
+    -ms-animation:myfirst 1s alternate forwards;
+  }
+  @keyframes myfirst
+    {
+    0% {width: 100%; height: 100%;}
+    100% {width: 110%; height: 110%;margin: -5% 0 0 -5%;}
+  }
+  @-webkit-keyframes myfirst
+    {
+    0% {width: 100%; height: 100%;}
+    100% {width: 120%; height: 110%;margin: -5% 0 0 -5%;}
+  }
+  @-moz-keyframes myfirst
+    {
+    0% {width: 100%; height: 100%;}
+    100% {width: 110%; height: 110%;margin: -5% 0 0 -5%;}
+  }
+  @-ms-keyframes myfirst
+    {
+    0% {width: 100%; height: 100%;}
+    100% {width: 120%; height: 110%;margin: -5% 0 0 -5%;}
+  }
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<a href="askWordDetails.html" class="list-item">
+	          <div class="img-box">
+	      		<img src="img/jpg-xwzx.png" class="image">
+	          </div>
+	          <div class="clearfix">
+        		<div class="title">
+        			<span class="title-txt">UI设计师</span>
+        			<time class="title-time">2018-02-06</time>
+        		</div>
+	        	<div class="instro">我们找的不仅是同事，更是合作伙伴！</div>
+	        	<div class="info">
+	        		<img src="img/png-goto.png" class="goto"/>
+	        	</div>
+	          </div>
+			</a>
+			<a href="askWordDetails.html" class="list-item">
+	          <div class="img-box">
+	      		<img src="img/jpg-xwzx.png" class="image">
+	          </div>
+	          <div class="clearfix">
+        		<div class="title">
+        			<span class="title-txt">UI设计师</span>
+        			<time class="title-time">2018-02-06</time>
+        		</div>
+	        	<div class="instro">我们找的不仅是同事，更是合作伙伴！</div>
+	        	<div class="info">
+	        		<img src="img/png-goto.png" class="goto"/>
+	        	</div>
+	          </div>
+			</a>
+			<a href="askWordDetails.html" class="list-item">
+	          <div class="img-box">
+	      		<img src="img/jpg-xwzx.png" class="image">
+	          </div>
+	          <div class="clearfix">
+        		<div class="title">
+        			<span class="title-txt">UI设计师</span>
+        			<time class="title-time">2018-02-06</time>
+        		</div>
+	        	<div class="instro">我们找的不仅是同事，更是合作伙伴！</div>
+	        	<div class="info">
+	        		<img src="img/png-goto.png" class="goto"/>
+	        	</div>
+	          </div>
+			</a>
+		</div>
+	</body>
+</html>

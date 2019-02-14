@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+	<head lang="en">
+		<meta charset="UTF-8">
+		<title>web端点击切换图片</title>
+		<link rel="stylesheet" href="css/public.css" />
+		<link rel="stylesheet" type="text/css" href="css/index.css" />
+		<script src="js/jquery.js"></script>
+		<script type="text/javascript" src="js/zturn.js"></script>
+	</head>
+
+	<body>
+
+		<!--轮播-->
+		<div class="lb_gl">
+			<div class="container">
+				<h1 class="turn_3d">点击两端图片顺时针切换</h1>
+				<div class="pictureSlider poster-main">
+					<div class="poster-btn poster-prev-btn"></div>
+					<ul id="zturn" class="poster-list">
+						<li class="poster-item  zturn-item">
+							<p class="xxgy">正文照1</p>
+						</li>
+
+						<li class="poster-item zturn-item">
+							<p class="xxgy">现金结2</p>
+						</li>
+
+						<li class="poster-item zturn-item">
+							<p class="xxgy">正文照3</p>
+						</li>
+
+					</ul>
+
+				</div>
+			</div>
+
+		</div>
+
+		<script type="text/javascript">
+			var aa = new zturn({
+				id: "zturn",
+				opacity: 0.9,
+				width: 382,
+				Awidth: 1024,
+				scale: 0.9,
+				auto: false, //是否轮播 默认5000
+				turning: 1000 //轮播时长
+			})
+			var ab = new zturn({
+				id: "zturn2",
+				opacity: 0.8,
+				width: 382,
+				Awidth: 1024,
+				scale: 0.6,
+				auto: true
+			})
+		</script>
+
+</html>

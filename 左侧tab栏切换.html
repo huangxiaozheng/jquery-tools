@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{margin: 0;padding: 0;}
+			ul{width: 1400px;margin: 0 auto;}
+			ul,ul li{list-style: none;display:block;}
+			li{
+				padding: 10px 0;
+				text-align: center;
+				border-bottom: 1px solid #eee;
+				width: 200px;
+			}
+			li:before{
+				content: '';
+			  	display: inline-block;
+			  	height: 12px;
+			  	position: relative;
+			  	left: -96px;
+			  	top: 0;
+			  	border-left: 3px solid #FFFFFF;	
+			}
+			li.selected:before{
+				border-left: 3px solid blue;
+			}
+			li:hover:before{
+				border-left: 3px solid blue;
+			}
+		</style>
+		<script src="js/jquery.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function(){
+				$('li').click(function(){
+					$(this).addClass('selected').siblings().removeClass('selected');
+				})
+			})
+		</script>
+	</head>
+	<body>
+		<ul>
+			<li class="selected">1</li>
+			<li>2</li>
+			<li>3</li>
+			<li>4</li>
+			<li>5</li>
+			<li>6</li>
+		</ul>
+	</body>
+</html>

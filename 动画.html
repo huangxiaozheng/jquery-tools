@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<style type="text/css">
+			*{padding:0;margin: 0;}
+			.container{width: 100%;height: 15rem;display: flex;flex-direction: row;list-style: none;}
+			
+			
+			.container li{width: 16.6%;height: 100%;}
+			.cont{width: 100%;blist-style: none;margin-top: 5rem;}
+			.cont-item{text-align: left;border-bottom:1px solid red;background-color: palegoldenrod;}
+			.cont-item:after{
+				
+			}
+			.title{background-color: pink;height: 3rem;line-height: 3rem;padding: 0 2rem;}
+			.info{display: none;border-top: 1px solid red;}
+			#open{background-color: red;}
+		</style>
+		
+	</head>
+	<body>
+		<!--<ul class="container">
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>-->
+		<ul class="cont">
+			<li class="cont-item">
+				<h2 class="title">第一题</h2>
+				<ul class="info">
+					<li>1</li>
+					<li>1</li>
+					<li>1</li>
+					<li>1</li>
+				</ul>
+			</li>
+			<li class="cont-item">
+				<h2 class="title">第2题</h2>
+				<ul class="info">
+					<li>2</li>
+					<li>2</li>
+					<li>2</li>
+					<li>2</li>
+				</ul>
+			</li>
+			<li class="cont-item">
+				<h2 class="title">第3题</h2>
+				<ul class="info">
+					<li>3</li>
+					<li>3</li>
+					<li>3</li>
+					<li>3</li>
+				</ul>
+			</li>
+			<li class="cont-item">
+				<h2 class="title">第4题</h2>
+				<ul class="info">
+					<li>4</li>
+					<li>4</li>
+					<li>4</li>
+					<li>4</li>
+				</ul>
+			</li>
+		</ul>
+		
+		<script src="js/jquery.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function(){
+				var $lis = $('.container li');
+				for(i=0 ; i < $lis.length ; i++){
+					$lis.eq(i).css("backgroundImage","url(img/"+(i+1)+".jpg)");
+				}
+				
+				//stop()在事件前面添加  ，阻止正在执行的动画
+				$lis.mouseenter(function(){
+					$(this).stop().animate({width:800}).siblings().stop().animate({width:100}).stop();
+				}).mouseleave(function(){
+					$lis.stop().animate({width:240})
+				});
+				
+				
+				
+				//手风琴
+				$('.cont-item').on('click',function(){
+					//给当前项的所有兄弟移除open
+					$(this).siblings('.cont-item').removeAttr('id');
+					
+					if($(this).attr('id') == 'open'){
+						//如果当前项的id=open，则移除掉id并且关闭显示
+						$(this).removeAttr('id').children('.info').slideUp();
+					}else{
+						//当前项没有id=open，则添加并显示；其兄弟元素的ul则关闭
+						$(this).attr('id','open').children('.info').slideDown();
+						$(this).siblings().children('.info').slideUp();
+					}
+				})
+			})
+		</script>
+	</body>
+</html>

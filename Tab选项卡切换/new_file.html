@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<style>
+			ul,ul li{
+				list-style: none;
+			}
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			.container{
+				position: relative;
+			}
+			 .tabBar{
+	            display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                align-items: center;
+            	background-color:#fff;
+             	position: fixed;
+             	top: 0;
+             	left: 0;
+             	right: 0;
+             	overflow: scroll;
+            	
+            }
+           .tabBar .tabBar-list{
+	           width: 50%;
+               text-align: center;
+	       	    padding:1rem 0;
+	       	  	border-bottom:1px solid  rgba(0, 0, 0, 0.2);
+           	  
+           }
+           .tabBar .tabBar-list:first-child a {
+       	       display: block;
+	           border-right: 1px solid  rgba(0, 0, 0, 0.2);
+           	
+           }
+            .tabBar .active {
+	            border-bottom: 2px solid #3486fb;
+            }
+            .tab-content{
+	          margin-top: 5rem;
+         }
+			.tab-pane{
+			
+				background-color: pink;
+			}
+			.exchage-pane{
+				display: none;
+				background-color: #87CEEB;
+			}
+		</style>
+		<script type="text/javascript" src="js/jquery.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				$(".tabBar .tabBar-list").click(function() {
+					$(this).addClass("active")
+						.siblings().removeClass("active");
+	
+					$(".tab-pane").eq($(this).index()).show()
+						.siblings().hide();
+				});
+			
+			})
+			
+
+		</script>
+	</head>
+	<body>
+		<div class="container">
+			<ul class="tabBar">
+			   <li class="tabBar-list active"><a>外观</a> </li>
+			   <li class="tabBar-list"><a>内饰</a></li>
+			</ul>
+			<div class="tab-content">
+				<div class="tab-pane active">
+					<ul>
+						<li>1233333</li>
+						<li>fsfsfdsfdsfs</li>
+						<li>fsdddddddddd</li>
+						<li>sfffff</li>
+						<li>fsdddddddd</li>
+						<li>sfddddddddd</li>
+						<li>sdfffffffff</li>
+						<li>sfddddddd</li>
+						<li>sfddddddddd</li>
+						<li>fssssssss</li>
+						<li>1233333</li>
+						<li>fsfsfdsfdsfs</li>
+						<li>fsdddddddddd</li>
+						<li>sfffff</li>
+						<li>fsdddddddd</li>
+						<li>sfddddddddd</li>
+						<li>sdfffffffff</li>
+						<li>sfddddddd</li>
+		
+					</ul>	
+				</div>
+				
+				
+				<div class="tab-pane exchage-pane" >
+					<ul>
+						<li>1233333</li>
+						<li>fsfsfdsfdsfs</li>
+						<li>fsdddddddddd</li>
+						<li>sfffff</li>
+						<li>fsdddddddd</li>
+						<li>sfddddddddd</li>
+						<li>sdfffffffff</li>
+						<li>sfddddddd</li>
+						<li>sfddddddddd</li>
+						<li>fssssssss</li>
+						<li>1233333</li>
+						
+					</ul>
+				</div>
+			</div>
+		</div>
+		
+	</body>
+</html>

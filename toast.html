@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>移动端轻提示</title>
+		<script src="js/jquery.js" type="text/javascript" charset="utf-8"></script>
+		<script src="toast.jquery.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function(){
+				$('.toast').click(function(){
+					$.toast.fail('需选择10组选手进行投票!', 10);
+				})
+				
+			})
+		</script>
+	</head>
+	<body>
+		<div class="toast" style="height: 300px;width: 300px;background-color: pink;text-align: center;line-height: 300px;">123</div>
+	</body>
+</html>

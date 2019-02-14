@@ -1,0 +1,225 @@
+<html lang="zh-CN">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" /> 
+		<title>菜单列表</title>
+		<style>
+			@charset "UTF-8";
+			* {
+				margin: 0;
+				padding: 0;
+				font-family: "Microsoft YaHei", Arial, sans-serif;
+				font-size: 14px;
+			}
+			
+			.list_dt {
+				background: #333;
+				color: white;
+				width: 100%;
+				cursor: pointer;
+				padding:1rem 4vw;
+				position: relative;
+				border-bottom: 1px solid #464646;
+				position: relative;
+			}
+			/*鼠标滑过时添加背景颜色*/
+			
+			.list_dt:hover {
+				background: #222;
+			}
+			/*鼠标滑过时添加蓝色竖线*/
+			
+			.list_dt:hover:before {
+				content: "";
+				display: block;
+				width: 3px;
+				height: 100%;
+				position: absolute;
+				left: 0;
+				top: 0;
+				background: blue;
+			}
+			
+			#open {
+				background: #222;
+			}
+			
+			#open:before{
+				content: "";
+				display: block;
+				width: 3px;
+				height: 100%;
+				position: absolute;
+				left: 0;
+				top: 0;
+				background: #4285F4;
+			}
+			
+			.list_dt:after {
+				content: '';
+				display: inline-block;
+				border-right: 1px solid #FFFEFE;
+				border-bottom: 1px solid #FFFEFE;
+				width: 0.6rem;
+				height: 0.6rem;
+				transform: rotate(-45deg);
+				-webkit-transform: rotate(-45deg);
+				position: relative;
+				right: .3rem;
+				top: -.3rem;
+				margin-left: .1rem;
+			}
+
+			#open:after{
+				content: '';
+				display: inline-block;
+				border-right: 1px solid #FFFEFE;
+				border-bottom: 1px solid #FFFEFE;
+				width: 0.6rem;
+				height: 0.6rem;
+				transform: rotate(45deg);
+				-webkit-transform: rotate(45deg);
+				position: relative;
+				left: .3rem;
+				top: -.3rem;
+				margin-left: .1rem;
+			}
+			
+			
+			
+			.list_dd {
+				display: none;
+			}
+			
+			.list_li {
+				background: #4e4e4e;
+				list-style-type: none;
+				color: white;
+				width: 100%;
+				padding: 0 30px;
+				height: 34px;
+				line-height: 34px;
+				cursor: pointer;
+				border-bottom: 1px solid #6b6b6b;
+			}
+			
+			.list_li:hover {
+				background: #4285F4;
+			}
+		</style>
+	</head>
+
+	<body>
+		<dl class="list_dl">
+			<dt class="list_dt">
+        	    1
+        	</dt>
+			<dd class="list_dd">
+				<ul>
+					<li class="list_li">111111</li>
+					<li class="list_li">11111111</li>
+					<li class="list_li">11111111</li>
+					<li class="list_li">111111</li>
+				</ul>
+			</dd>
+
+			<dt class="list_dt">
+            	2
+        	</dt>
+			<dd class="list_dd">
+				<ul>
+					<li class="list_li">222222222</li>
+					<li class="list_li">222222</li>
+					<li class="list_li">22222222222</li>
+					<li class="list_li">222222222</li>
+					<li class="list_li">2222222222</li>
+					<li class="list_li">22222222</li>
+				</ul>
+			</dd>
+
+			<dt class="list_dt">
+            	3
+       		</dt>
+			<dd class="list_dd">
+				<ul>
+					<li class="list_li">3333333333</li>
+					<li class="list_li">33333333</li>
+					<li class="list_li">33333333333333</li>
+					<li class="list_li">333333333333</li>
+					<li class="list_li">3333333</li>
+					<li class="list_li">333333333</li>
+				</ul>
+			</dd>
+
+			<dt class="list_dt">
+           		4
+        	</dt>
+			<dd class="list_dd">
+				<ul>
+					<li class="list_li">4444444444</li>
+					<li class="list_li">4444444444</li>
+					<li class="list_li">4444444444</li>
+					<li class="list_li">4444444444</li>
+					<li class="list_li">4444444444</li>
+					<li class="list_li">4444444444</li>
+					<li class="list_li">4444444444</li>
+					<li class="list_li">4444444444</li>
+					<li class="list_li">4444444444</li>
+				</ul>
+			</dd>
+
+			<dt class="list_dt">
+            	5
+        	</dt>
+			<dd class="list_dd">
+				<ul>
+					<li class="list_li">55555555</li>
+					<li class="list_li">55555555</li>
+					<li class="list_li">55555555</li>
+					<li class="list_li">55555555</li>
+					<li class="list_li">55555555</li>
+				</ul>
+			</dd>
+
+			<dt class="list_dt">
+           		6
+        	</dt>
+			<dd class="list_dd">
+				<ul>
+					<li class="list_li">666666666</li>
+					<li class="list_li">666666666</li>
+					<li class="list_li">666666666</li>
+					<li class="list_li">666666666</li>
+					<li class="list_li">666666666</li>
+					<li class="list_li">666666666</li>
+					<li class="list_li">666666666</li>
+					<li class="list_li">666666666</li>
+					<li class="list_li">666666666</li>
+					<li class="list_li">666666666</li>
+					<li class="list_li">666666666</li>
+				</ul>
+			</dd>
+		</dl>
+		<!--为了浏览器兼容性jqeury版本推荐使用1.12.0，其他版本会出现不支持某些浏览器-->
+		<script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+		<script type="text/javascript">
+			$(".list_dt").on("click", function() {
+				$('.list_dd').stop();
+				//从任何 dt元素中移除 id属性：
+				$(this).siblings("dt").removeAttr("id");
+
+				//给当前dt添加id="open"  ;  slideUp隐藏  ;  slideDown展开
+				if($(this).attr("id") == "open") {
+					//如果当前项有id，则将当前项的id移除，其兄弟dd隐藏
+					$(this).removeAttr("id").siblings("dd").slideUp();
+				} else {
+					//如果当前dt没有id，则给当前dt添加id，其后的dd元素展开，其他dd兄弟元素隐藏
+					//$("div").next("p") 每一个div元素后的p元素
+					$(this).attr("id", "open").next().slideDown().siblings("dd").slideUp();
+				}
+			});
+		</script>
+	</body>
+
+</html>

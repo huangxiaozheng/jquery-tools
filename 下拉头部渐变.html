@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>下拉头部背景渐变</title>
+		<style>
+			*{margin: 0;padding: 0;}
+			ul,ul li{list-style: none;}	
+			html{font-size: 62.5%;}
+			.container{font-size: 1.5rem;color: #333;}
+			.banner{width: 100%;height: 20rem;}
+			.banner img{width: 100%;height: 100%;}
+			ul li{padding:1.5rem 4vw 0;}
+			.searchBox{width: 100%;display: flex;justify-content: center;align-items: center;padding:.6rem 0;position: fixed;top: 0;z-index: 99;}	
+			.searchBox div{width: 92%;margin: 0 4%;position: relative;border:1px solid #fff;border-radius: .5rem;}
+			.searchBox div input{width:84%;height: 3.2rem;outline: none;border:none;margin: 0 4%;text-align: center;background-color: transparent;}
+			.searchBox div img{width:2rem;height: 2rem;position: absolute;right:4%;top: 0.5rem;}
+		</style>
+		<script src="js/jquery.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function(){
+				searchEffect();
+			});
+			
+			//1、头部搜索框随页面滚动背景变色效果
+			function searchEffect() {
+				$(window).on("scroll", function() {
+					//获取页面滚出屏幕的距离
+					var offetTopHeight = $(window).scrollTop();
+					//获取轮播图高度
+					var bannerHeight = $('.banner').height();
+					console.log(offetTopHeight);
+					//初始化透明度
+					var opacity = 0;
+					if(offetTopHeight < bannerHeight) {
+						opacity = offetTopHeight / bannerHeight;
+						$(".searchBox").css("background-color", "rgba(233,35,34," + opacity + ")")
+					}
+			
+				});
+			}
+
+		</script>
+	</head>
+	<body>
+		<div class="container">
+			<div class="banner">
+				<img src="img/1.jpg"/>
+			</div>
+			<div class="searchBox">
+				<div>
+					<input type="text" placeholder="请输入要搜索的内容"/>
+					<img src="img/icon-search.png"/>
+				</div>
+			</div>
+			<ul>
+				<li>哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈或或或</li>
+				<li>哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈或或或</li>
+				<li>哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈或或或</li>
+				<li>哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈或或或</li>
+				<li>哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈或或或</li>
+				<li>哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈或或或</li>
+				<li>哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈或或或</li>
+				<li>哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈或或或</li>
+				<li>哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈或或或</li>
+				<li>哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈或或或</li>
+				<li>哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈或或或</li>
+				<li>哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈或或或</li>
+				<li>哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈或或或</li>
+				<li>哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈或或或</li>
+				<li>哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈或或或</li>
+				<li>哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈或或或</li>
+				<li>哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈或或或</li>
+				<li>哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈或或或</li>
+				<li>哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈或或或</li>
+				<li>哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈或或或</li>
+				<li>哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈或或或</li>
+				<li>哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈或或或</li>
+				<li>哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈或或或</li>
+				<li>哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈或或或</li>
+				<li>哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈或或或</li>
+				<li>哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈或或或</li>
+				<li>哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈或或或</li>
+				<li>哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈或或或</li>
+				<li>哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈或或或</li>
+				<li>哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈或或或</li>
+				<li>哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈或或或</li>
+				<li>哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈或或或</li>
+				
+			</ul>
+		</div>
+	</body>
+</html>

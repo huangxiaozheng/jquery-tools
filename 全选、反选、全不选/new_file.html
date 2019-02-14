@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		你喜欢的运动是？
+		<input type="checkbox" id="checkedAllBox"/>全选/全不选<br />
+		<input type="checkbox" name="items"/>跑步
+		<input type="checkbox" name="items"/>瑜伽
+		<input type="checkbox" name="items"/>游泳
+		<input type="checkbox" name="items"/>散打<br />
+		
+		<input type="button" value="全选" id="allSelected"/>
+		<input type="button" value="全不选" id="notSelected"/>
+		<input type="button" value="反选" id="fSelected"/>
+		<input type="button" value="提交" id="submit"/>
+		
+		<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+		<script type="text/javascript">
+			var $checkedAllBox = $('#checkedAllBox');
+			var $items = $(':checkbox[name=items]');
+			//操作的是布尔值所以用prop不用arrt
+			//全选
+			$('#allSelected').click(function(){
+				$items.prop('checked',true);
+				$('#checkedAllBox').prop('checked',true);
+			})
+			//全不选
+			$('#notSelected').click(function(){
+				$items.prop('checked',false);
+				$('#checkedAllBox').prop('checked',false);
+			})
+			//反选
+			$('#fSelected').click(function(){
+				$items.each(function(){
+					//this为dom元素对象，所以可以使用元素的属性
+					this.checked = !this.checked
+				})
+				
+				$('#checkedAllBox').prop('checked',$items.filter(':not(:checked)').length===0);
+			})
+			//点击全选/全不选实现全选/全不选
+			$('#checkedAllBox').click(function(){
+				$items.prop('checked',this.checked);
+			})
+			//点击某个爱好时，实现全选/全不选状态
+			$items.click(function(){
+				$checkedAllBox.prop('checked',$items.filter(':not(:checked)').length===0);
+			})
+			
+		</script>
+	</body>
+</html>

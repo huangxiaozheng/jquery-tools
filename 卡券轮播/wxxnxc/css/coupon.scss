@@ -1,0 +1,158 @@
+@charset "utf-8";
+$contentMargin:1.5rem; //卡片内容边距
+$themeColor:#ef5a74; //主题色
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: simhei;
+    background-color: #fff;
+}
+
+.swiper-container {
+    width: 100%;
+    background-color: #f3f0f2;
+    padding: 10vw 0 18vw;
+}
+
+.swiper-slide {
+    position: relative;
+    width: 75%;
+    padding: 0 5%;
+    &:after {
+        display: block;
+        content: '';
+        width: 80%;
+        height: 8vw;
+        position: absolute;
+        left: 10%;
+        right: 10%;
+        bottom: 0;
+        border-radius: 5vw;
+        z-index: -1;
+    }
+}
+
+//卡片阴影黄
+.shadow_01 {
+    &:after {
+        box-shadow: 0 2vw 2vw rgba(254, 174, 112, .4);
+    }
+}
+
+//卡片阴影红
+.shadow_02 {
+    &:after {
+        box-shadow: 0 2vw 2vw rgba(240, 71, 94, .4);
+    }
+}
+
+//卡片阴影蓝
+.shadow_03 {
+    &:after {
+        box-shadow: 0 2vw 2vw rgba(76, 118, 244, .4);
+    }
+}
+
+//卡片阴影紫
+.shadow_04 {
+    &:after {
+        box-shadow: 0 2vw 2vw rgba(148, 84, 243, .4);
+    }
+}
+
+.swiper-slide.swiper-slide-active {
+    transform: scale(1.2); //设置缩放比例
+    -ms-transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+}
+
+.card {
+    display: block;
+    width: 100%;
+}
+
+.card-content {
+    position: absolute;
+    left: 10%;
+    top: $contentMargin;
+    right: 10%;
+    bottom: $contentMargin;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    color: #fff;
+    line-height: 1.5;
+}
+
+.card-name {
+    font-size: 1.8rem;
+    font-family: "MFJianHei_Noncommercial";
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    font-style: italic;
+    text-shadow: 0px 2px 3px rgba(132, 56, 101, 0.38);
+}
+
+.card-dec {
+    font-size: 1.4rem;
+    font-family: "PingFang";
+    color: rgb(237, 237, 237);
+    text-shadow: 0px 2px 2px rgba(132, 56, 101, 0.38);
+}
+
+.card-top {
+    * {
+        display: block;
+    }
+}
+
+.card-bottom {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    .bottom-item {
+        display: block;
+        flex: 1;
+        * {
+            display: block;
+        }
+        .type {
+            font-family: "PingFang";
+            color: rgb(255, 255, 255);
+            text-shadow: 0px 2px 2px rgba(132, 56, 101, 0.38);
+            font-size: 1.5rem;
+        }
+        .info {
+            font-family: "PingFang";
+            color: rgb(255, 255, 255);
+            text-shadow: 0px 2px 2px rgba(132, 56, 101, 0.38);
+            font-size: 1.5rem;
+        }
+    }
+}
+
+.swiper-container-horizontal>.swiper-pagination-bullets,
+.swiper-pagination-custom,
+.swiper-pagination-fraction {
+    bottom: 5vw;
+}
+
+.swiper-pagination-bullet {
+    width: 3rem;
+    height: .4rem;
+    border-radius: 1rem;
+}
+
+.swiper-pagination-bullet-active {
+    background: $themeColor;
+}

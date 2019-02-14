@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>上传保单</title>
+		<link rel="stylesheet" href="css/uploadBill.css" />
+		<script type="text/javascript" src="js/jquery.js"></script>
+		<script type="text/javascript" src="js/upload.js"></script>
+		<script type="text/javascript" src="js/billUpload.js"></script>
+		<style type="text/css">
+			.popupBox{
+				border-radius: 20%;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="uploadBill">
+			<h2 class="warn">您保单影像提供的清晰度及完整度，将影像保单信息整理的完整度及评测信息哦</h2>
+			<ul class="bill">
+				<!--保单影像-->
+				<li class="bill-item">
+				
+					<ul class="cont ">
+						<li class="cont-item contImgBox cont1">
+							<label class="upload-group-item contImg" onclick="getImgIndex(this)">
+								<img src="img/contPlus.PNG" alt="" class="upload-img" />
+								<input class="upload-input"  type="file" readonly="" accept="image/*"/>
+								<button class="btn-delete contDel"></button>
+							</label>
+						</li>
+						<li class="cont-item"></li>
+					</ul>
+					
+					
+					<!--临时存放图片，用于替换-->
+					<ul class="cont temp23" style="display: none;">
+						<li class="cont-item coverImgBox1 temp">
+							<label class="upload-group-item tempImg">
+								<img src="img/coverPlus.PNG" alt="" class="upload-img" />
+								<input class="upload-input"  type="file"  accept="image/*" />
+								<button class="btn-delete"></button>
+							</label>
+						</li>
+					</ul>
+				</li>
+			</ul>
+	</body>
+
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+<title>treeskipcs</title>
+<link rel="icon" href="data:image/ico;base64,aWNv">
+<link rel="stylesheet" href="css/max.css" />
+</head>
+<body>
+
+<script src="jquery.js"></script>
+<script src="js/max.js"></script>
+<script>
+
+var json=[
+	{"id":460804,"name":"世纪奥通","child":[
+		{"id":485657,"name":"设计部","child":""},
+		{"id":485659,"name":"移动部","child":[
+			{"id":485660,"name":"安卓","child":[
+				{"id":485662,"name":"安卓一部","child":""}
+			]},
+			{"id":485661,"name":"苹果","child":[
+				{"id":485663,"name":"苹果二部","child":""}
+			]}
+		]},
+		{"id":485658,"name":"应用部","child":""}
+	]}
+];
+
+_jq_treeskipcs.skip({
+    'name':'gzh',
+    'adata':json,
+    'cageBgcolor':'#000',
+    'cageOpacity':0.5,
+    'headCaption':'请选择部门…',
+    'sureTxt':'确认',
+    'sureFun':function(){},
+    'cancelTxt':'取消',
+    'cancelFun':function(){}
+});
+
+</script>
+
+</body>
+</html>
