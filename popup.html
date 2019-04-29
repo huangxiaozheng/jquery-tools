@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>弹窗</title>
+		<script src="js/jquery.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css">
+			*{margin: 0;padding: 0;}
+			.container{padding: 2rem;}
+			ul,ul li{list-style: none;}
+			.popup1{
+				height: 100%;
+				width: 100%;
+				display: none;
+			}
+			.popup2{
+				height: 100%;
+				width: 100%;
+				background: rgba(0,0,0,0.3);
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				position: fixed;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				top: 0;
+			}
+			.popup3{
+				width: 86%;
+				max-height: 86%;
+				background: #FFF;
+				overflow: hidden;
+				border-radius: .5rem;
+				transform:translate(0,0) ;
+				-webkit-transform:translate(0,0);
+			}
+			.btn1{
+				margin: 2rem;
+			}
+			.btn2{
+				position: fixed;
+				bottom: 0;
+				background: pink;
+				border-bottom-left-radius: .5rem;
+				border-bottom-right-radius: .5rem;
+				width: 100%;
+				margin: 1.5rem 0 0;
+				line-height: 3rem;
+				text-align: center;
+			}
+			.popup-cont{
+				height: 90%;
+				width: 92%;
+				background: gold;
+				overflow-y: scroll;
+				padding: 4% 4% 6%;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			以下是命令整理
+			一般的命令
+			
+			git init  => 初始化一个本地 git 仓库
+			git config --global user.name "Your Name" => 设置自己的 Name
+			git config --global user.email you@example.com => 设置自己的邮箱
+			git add -A => 将本次增加的文件全部加入到缓冲区中
+			git commit -m "message" => 向本地做一次提交
+			git status => 查看文件状态
+			git remote add origin https://github.com/nanchen2251/AiYaGirl.git => 把本地仓库和远程仓库做连接。「其中的 https://github.com/nanchen2251/AiYaGirl.git 应该替换为你的地址」
+			git push -u origin master => 提交文件到你的远程仓库
+			
+			多分支管理
+			
+			git branch branch1 => 在本地新建一个分支，其中「branch1」为分支名
+			git checkout branch1 => 切换到你的新分支，其中「branch1」为分支名
+			git push origin branch1 => 把新分支发布到远程的仓库
+			git branch -d branch1 => 在本地删除一个分支
+			git push origin :branch1 => 在远成仓库删除一个分支，分支前的「：」代表删除
+			git merge branch1 => 分支合并
+			git push -u origin master => 推送主分支
+			git branch => 查看分支，并查看当前隶属哪个分支
+			以下是命令整理
+			一般的命令
+			
+			git init  => 初始化一个本地 git 仓库
+			git config --global user.name "Your Name" => 设置自己的 Name
+			git config --global user.email you@example.com => 设置自己的邮箱
+			git add -A => 将本次增加的文件全部加入到缓冲区中
+			git commit -m "message" => 向本地做一次提交
+			git status => 查看文件状态
+			git remote add origin https://github.com/nanchen2251/AiYaGirl.git => 把本地仓库和远程仓库做连接。「其中的 https://github.com/nanchen2251/AiYaGirl.git 应该替换为你的地址」
+			git push -u origin master => 提交文件到你的远程仓库
+			
+			多分支管理
+			
+			git branch branch1 => 在本地新建一个分支，其中「branch1」为分支名
+			git checkout branch1 => 切换到你的新分支，其中「branch1」为分支名
+			git push origin branch1 => 把新分支发布到远程的仓库
+			git branch -d branch1 => 在本地删除一个分支
+			git push origin :branch1 => 在远成仓库删除一个分支，分支前的「：」代表删除
+			git merge branch1 => 分支合并
+			git push -u origin master => 推送主分支
+			git branch => 查看分支，并查看当前隶属哪个分支
+			以下是命令整理
+			一般的命令
+			
+			git init  => 初始化一个本地 git 仓库
+			git config --global user.name "Your Name" => 设置自己的 Name
+			git config --global user.email you@example.com => 设置自己的邮箱
+			git add -A => 将本次增加的文件全部加入到缓冲区中
+			git commit -m "message" => 向本地做一次提交
+			git status => 查看文件状态
+			git remote add origin https://github.com/nanchen2251/AiYaGirl.git => 把本地仓库和远程仓库做连接。「其中的 https://github.com/nanchen2251/AiYaGirl.git 应该替换为你的地址」
+			git push -u origin master => 提交文件到你的远程仓库
+			
+			多分支管理
+			
+			git branch branch1 => 在本地新建一个分支，其中「branch1」为分支名
+			git checkout branch1 => 切换到你的新分支，其中「branch1」为分支名
+			git push origin branch1 => 把新分支发布到远程的仓库
+			git branch -d branch1 => 在本地删除一个分支
+			git push origin :branch1 => 在远成仓库删除一个分支，分支前的「：」代表删除
+			git merge branch1 => 分支合并
+			git push -u origin master => 推送主分支
+			git branch => 查看分支，并查看当前隶属哪个分支
+			<button class="btn1">点击打开弹窗</button>
+		</div>
+		<div class="popup1">
+			<div class="popup2">
+				<div class="popup3">
+					<ul class="popup-cont">
+						<li>1</li>
+						<li>1</li>
+						<li>1</li>
+						<li>1</li>
+						<li>1</li>
+						<li>1</li>
+						<li>1</li>
+						<li>1</li>
+						<li>1</li>
+						<li>1</li>
+						<li>1</li>
+						<li>1</li>
+						<li>1</li>
+						<li>1</li>
+						<li>1</li>
+						<li>1</li>
+						<li>1</li>
+						<li>1</li>
+						<li>1</li>
+						<li>1</li>
+						<li>1</li>
+						<li>1</li>
+						<li>1</li>
+						<li>1</li>
+						<li>1</li>
+						<li>1</li>
+						<li>1</li>
+						<li>1</li>
+						<li>1</li>
+						<li>1</li>
+						<li>1</li>
+						<li>1</li>
+						<li>1</li>
+						<li>1</li>
+						<li>1</li>
+						<li>1</li>
+						<li>1</li>
+						<li>1</li>
+						<li>1</li>
+						<li style="padding-bottom: 2rem;">2</li>
+					</ul>
+					<div class="btn2">确定</div>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript">
+			$(function(){
+				/*打开弹窗*/
+				$('.btn1').click(function(){
+					$('.popup1').css('display','block');
+					//弹窗显示时底层不能滚动
+					$("body").css({"position":"fixed","top":"0","left":"0","right":"0","height":"100%","overflow":"hidden"});
+				});
+				/*打开弹窗*/
+				$('.popup1').click(function(){
+					$(this).css('display','none');
+				});
+				//阻止冒泡
+				$('.popup3').click(function(event){
+					event.stopPropagation();
+				});
+			})
+		</script>
+	</body>
+</html>
