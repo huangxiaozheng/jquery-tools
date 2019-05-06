@@ -2,7 +2,16 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>克隆复制元素</title>
+		<style type="text/css">
+			*{margin: 0;padding: 0;}
+			ul,ul li{list-style: none;}
+			input{border:none;}
+			.container{padding: 2rem 4vw;}
+			.clone-box{display: flex;flex-direction: column;}
+			.clone-box-item{display: flex;flex-direction: row;justify-content: space-between;}
+		</style>
 		<script src="js/jquery.js" type="text/javascript" charset="utf-8"></script>
 		<script type="text/javascript">
 			$(document).ready(function(){
@@ -13,12 +22,18 @@
 		</script>
 	</head>
 	<body>
-		<div id="">
-			<ul>
-				<li>11111111111111111111111111</li>
-				<li>22222222222222222222222222</li>
-				<li>33333333333333333333333333</li>
-				<li>44444444444444444444444444</li>
+		<div class="container">
+			<ul class="clone-box">
+				<li class="clone-box-item">
+					<div class="clone-cont-top">
+						<span>类型</span>
+						<input type="text" placeholder="请填写受益人类型" />
+					</div>
+					<div class="clone-cont-bottom">
+						<span class="">受益人<span class="num">1</span></span>
+						<input type="text" placeholder="请填写受益人姓名" />	
+					</div>
+				</li>
 			</ul>
 			<button>复制每个 p 元素，然后追加到 body 元素</button>
 		</div>
